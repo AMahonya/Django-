@@ -1,0 +1,28 @@
+{% extends 'menu.html' %}
+
+{% load static %}
+
+{% block title %}Корзина | Интернет магазин игр{% endblock %}
+
+{% block pagename %}Ваша корзина с играми:{% endblock %}
+{% block content %}
+    <section class="gallery">
+
+        {% if images %}
+            {% for image in images %}
+                <div class="image-container">
+                    <img src="{% static image.image_url %}" alt="{{ image.caption }}">
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1>Извините, корзина пуста :(</h1>
+             <!--  Rest of your form -->
+        {% endif %}
+     <div class="service">
+                   <form method="get" action="{% url 'main' %}">
+                <button type="submit">Вернуться на главную</button>
+            </form>
+
+                     </div>
+    </section>
+{% endblock %}

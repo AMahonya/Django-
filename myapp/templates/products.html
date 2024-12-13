@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+{% block title %}Список игр{% endblock %}
+
+{% block pagename %}Наши игры: {% endblock %}
+{% block content %}
+    <section class="services">
+        <h2>{{head}}</h2>
+           <div class="uslugi">
+            <ul>
+                    {% for service in services %}
+
+                <h3>{{ service.title }}</h3>
+                        <li>
+                            <p>{{ service.description }}</p>
+                          </li>
+                <li>
+                            <p>Игра займет {{ service.size }} GB на диске</p>
+                </li>
+                <li>
+                            <p>Цена: {{ service.cost }} ₽</p>
+                </li>
+                            <button type="button">Добавить в карзину</button>
+
+                    {% endfor %}
+                </ul>
+        </div>
+
+
+      <div class="service">
+                   <form method="get" action="{% url 'main' %}">
+                <button type="submit">Вернуться на главную</button>
+            </form>
+
+                     </div>
+    </section>
+{% endblock %}

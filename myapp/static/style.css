@@ -1,0 +1,212 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Светло-серый фон */
+}
+
+header {
+  background-color: #333; /* Темно-серый заголовок */
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.menu {
+  background-color: #fff; /* Белый фон для меню */
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для меню */
+  margin-bottom: 1em;
+}
+
+.button {
+  display: inline-block;
+  background-color: #4CAF50; /* Зеленый цвет кнопок */
+  color: white;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.button:hover {
+  background-color: #45a049; /* Темнее зеленый при наведении */
+}
+
+main {
+  padding: 1em;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Выравнивание по центру */
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Дополнительный стиль при наведении */
+.gallery img:hover {
+  transform: scale(1.05); /* Небольшое увеличение при наведении */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.services {
+  padding: 1em;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.uslugi {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос на следующую строку, если элементов много */
+  justify-content: space-around; /* Распределяем элементы равномерно */
+}
+
+
+.uslugi ul {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+  width: 30%; /* Ширина каждого блока услуг */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.uslugi li {
+  margin-bottom: 0.5em;
+}
+
+
+.uslugi button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.service button {
+  margin: 1em auto;
+  display: block; /* Center the button */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .uslugi ul {
+    width: 90%; /* Занимаем почти всю ширину на маленьких экранах */
+    margin: 1em auto; /* Выравнивание по центру */
+  }
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Выравнивание изображений по центру */
+  padding: 1em;
+}
+
+.image-container {
+  width: 30%; /* Ширина контейнера для изображения */
+  margin: 10px;
+  position: relative; /* Для позиционирования подписи */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block; /* Убираем отступы снизу изображения */
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+}
+
+.image-container .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для подписи */
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Responsiveness: Adjust image container width for smaller screens */
+@media (max-width: 768px) {
+  .image-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    width: 90%;
+  }
+}
+
+.service {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.service button {
+  margin: 1em auto;
+  display: block; /* Center the button */
+}
+
+
+.service {
+  position: fixed; /* Ключевое свойство для позиционирования внизу */
+  bottom: 0;
+  left: 0;
+  padding: 1em; /* Отступ от краев */
+  background-color: #f0f0f0; /* Светло-серый фон (можно изменить) */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Тень (опционально) */
+}
+
+.service button {
+  /* Стили для кнопки, например: */
+  background-color: #4CAF50; /* Зеленый */
+  color: white;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/*  Медиа-запрос для адаптации под маленькие экраны.  Кнопка может занять всю ширину. */
+@media (max-width: 600px) {
+    .service {
+        left: 0;
+        width: 100%; /* Кнопка занимает всю ширину на маленьких экранах */
+        text-align: center; /* Центрирование кнопки на маленьких экранах */
+    }
+}

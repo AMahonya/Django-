@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+     <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{% block pagename %}{% endblock %}</h1>
+    </header>
+    <main>
+        <section class="menu">
+            {% block menu %}
+                <a href="{% url 'main' %}" class="button">Главная</a>
+                <br><br>
+                <a href="{% url 'nails_services' %}" class="button">Асортимент игр</a>
+                <br><br>
+                <a href="{% url 'nails_gallery' %}" class="button">Корзина</a>
+            {% endblock %}
+        </section>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
