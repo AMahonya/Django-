@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from .forms import UserRegister
 from .models import *
@@ -7,6 +8,14 @@ from .models import *
 
 def main_page(request):
     return render(request, 'main_page.html')
+
+
+def news(request):
+    news_pag = News.objects.all().order_by('-date')
+    paginator = Paginator(news_pag, 3)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'news.html', {'page_obj': page_obj})
 
 
 def products(request):

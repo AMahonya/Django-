@@ -23,3 +23,8 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
+
+class News(models.Model):
+    title = models.CharField(max_length=100, help_text="Заголовок новости")
+    content = models.TextField(help_text="Содержание новости")
+    date = models.DateTimeField(auto_now_add=True, help_text="Дата публикации")

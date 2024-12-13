@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from task1.views import main_page, products, basket, sign_up_by_django, sign_up_by_html
+from task1.views import main_page, products, basket, sign_up_by_django, sign_up_by_html, news
 
 
 urlpatterns = [
@@ -27,4 +27,5 @@ urlpatterns = [
     path('game-shop/basket/', basket, name='nails_gallery'),
     path('sign_up_by_django/', sign_up_by_django, name='Registraciya'),
     path('sign_up_by_html/', sign_up_by_html, name='Registraciya'),
+    path('platform/news/', news, name='news'),
 ]
