@@ -2,7 +2,7 @@
 19 module dz
 
 15,12,2024 
-список использованных запросов Django ORM для тестирования базы данных.
+список использованных запросов Django ORM для тестирования базы данных Postgresql.
 >>> from task1.models import Game, Category, Order, Buyer
 >>> category1 = Category.objects.create(category_name='RPG')
 >>> category2 = Category.objects.create(category_name='Sandbox')
