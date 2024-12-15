@@ -3,10 +3,9 @@
 
 15,12,2024 
 список использованных запросов Django ORM для тестирования базы данных Postgresql.
- <br>
->>> from task1.models import Game, Category, Order, Buyer
->>> category1 = Category.objects.create(category_name='RPG')
->>> category2 = Category.objects.create(category_name='Sandbox')
+>>> from task1.models import Game, Category, Order, Buyer \n
+>>> category1 = Category.objects.create(category_name='RPG') \n
+>>> category2 = Category.objects.create(category_name='Sandbox') \n
 >>> category3 = Category.objects.create(category_name="Action")
 >>> buyer1 = Buyer(name="Antonio", balance="1800", age="28")                     
 >>> buyer2 = Buyer(name="Serhio", balance="0", age="15")     
